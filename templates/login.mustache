@@ -32,6 +32,7 @@
 }}
 {{! MODIFICATION:
     * Add own additional layout elements: the footnote.
+    * Moved the variable output.standard_end_of_body_html to the end of the columns2.mustache template to solve Javascript issues with behat tests.
 }}
 {{> theme_boost/head }}
 
@@ -70,7 +71,9 @@
             {{{ output.login_info }}}
             {{{ output.home_link }}}
             {{{ output.standard_footer_html }}}
-            {{{ output.standard_end_of_body_html }}}
+            {{! Moved the variable
+                output.standard_end_of_body_html
+                to the end of the columns2.mustache template to solve Javascript issues with behat tests. }}
         </div>
     </footer>
     {{{ pagebottomelements }}}
